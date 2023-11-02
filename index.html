@@ -60,8 +60,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-8 my-contact-hover p-0">
-                        <div class="col-12 justify-content-between p-2 d-flex align-items-center">
+                    <div class="col-12 col-md-8 my-contact-hover flex-column d-flex p-0">
+                        <div class="col-12 border-start justify-content-between p-2 d-flex align-items-center">
                             <div class="d-flex align-items-center">
                                 <div>
                                     <img :src="contacts[0].avatar" class="avatar" alt="">
@@ -76,6 +76,37 @@
                                 <i class="fa-solid mx-2  fa-paperclip"></i>
                                 <i class="fa-solid mx-2 fa-ellipsis-vertical"></i>
                             </div>
+                        </div>
+                        <div class="col-12 flex-grow-1 h-0 overflow-y-auto chat-container">
+                            <div v-for="mex in contacts[0].messages">
+                                <div :class="mex.status">
+                                    <div :class="mex.status + '-message'">
+                                        <p class="m-0">{{ mex.message }}</p>
+                                        <span class="hour-message my-text-grey">{{ mex.date }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="sent">
+                                <div class="sent-message">
+                                    <p class="m-0">{{ contacts[0].messages[0].message }}</p>
+                                    <span class="hour-message my-text-grey">15:30</span>
+                                </div>
+                            </div>
+                            <div class="sent">
+                                <div class="sent-message">
+                                    <span>{{ contacts[0].messages[1].message }}</span>
+                                    <span class="hour-message my-text-grey">15:50</span>
+                                </div>
+                            </div>
+                            <div class="received">
+                                <div class="received-message">
+                                    <span>{{ contacts[0].messages[2].message }}</span>
+                                    <span class="hour-message my-text-grey">16:15</span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="col-12">
+
                         </div>
                     </div>
                 </div>
