@@ -121,3 +121,6 @@ body {
 .cursor-pointer {
     cursor: pointer;
 }
+.active {
+    background-color: var(--color-contact-hover);
+}

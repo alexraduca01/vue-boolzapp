@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div class="col-12 overflow-y-auto h-0 flex-grow-1">
-                            <div class="p-2 border-top d-flex align-items-center position-relative cursor-pointer" v-for="user in contacts">
+                            <div class="p-2 border-top d-flex align-items-center position-relative cursor-pointer" :class="activeChat(index)" v-for="(user, index) in contacts" @click="changeChat(index), activeChat(index)">
                                 <div>
                                     <img :src="user.avatar" class="contacts-avatar" :alt="user.name">
                                 </div>
@@ -64,10 +64,10 @@
                         <div class="col-12 border-start justify-content-between p-2 d-flex align-items-center">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    <img :src="contacts[0].avatar" class="avatar" alt="">
+                                    <img :src="contacts[activeIndex].avatar" class="avatar" alt="">
                                 </div>
                                 <div class="ms-2">
-                                    <p class="m-0">{{ contacts[0].name }}</p>
+                                    <p class="m-0">{{ contacts[activeIndex].name }}</p>
                                     <p class="m-0 my-fs my-text-grey">Ultimo accesso oggi alle 12:00</p>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="col-12 flex-grow-1 h-0 overflow-y-auto chat-container">
-                            <div v-for="mex in contacts[0].messages" :class="mex.status">
+                            <div v-for="mex in contacts[activeIndex].messages" :class="mex.status">
                                 <div :class="mex.status + '-message'">
                                     <p class="m-0">{{ mex.message }}</p>
                                     <span class="hour-message my-text-grey">{{ mex.date }}</span>
