@@ -1,0 +1,52 @@
+/* presets */
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+:root {
+    --color-white: #ffffff;
+    --color-dark-text: #161012;
+    --color-dark-grey: #6b7376;
+    --color-text-grey: #b6bbc1;
+    --color-headers: #eaeaea;
+    --color-contact-hover: #e9ebeb;
+    --color-light-icons: #b1b1b1;
+    --color-sent-message: #d5f9ba;
+    --color-notification: #8edafc;
+    --my-bg-color: linear-gradient(to bottom,#009688 0%,#009688 20%,#DBDBD3 20%,#DBDBD3 100%);
+}
+
+/* colors */
+
+.my-white {
+    color: var(--color-white);
+}
+.my-dark-text {
+    color: var(--color-dark-text);
+}
+.my-dark-grey {
+    color: var(--color-dark-grey);
+}
+.my-text-grey {
+    color: var(--color-text-grey);
+}
+.my-headers {
+    color: var(--color-headers);
+}
+.my-contact-hover {
+    color: var(--color-contact-hover);
+}
+.my-light-icons {
+    color: var(--color-light-icons);
+}
+.my-sent-message {
+    color: var(--color-sent-message);
+}
+.my-notification {
+    color: var(--color-notification);
+}
+.my-bg-color {
+    color: var(--my-bg-color);
+}
+
+/* utility */
