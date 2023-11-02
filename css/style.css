@@ -13,6 +13,7 @@ body {
     --color-light-icons: #b1b1b1;
     --color-sent-message: #d5f9ba;
     --color-notification: #8edafc;
+    --color-input-container: #F3EEEA;
     --my-bg-color: linear-gradient(to bottom,#009688 0%,#009688 20%,#DBDBD3 20%,#DBDBD3 100%);
 }
 
@@ -47,6 +48,9 @@ body {
 }
 .my-bg-color {
     background: var(--my-bg-color);
+}
+.my-input-container {
+    background-color: var(--color-input-container);
 }
 
 /* utility */
@@ -113,4 +117,7 @@ body {
     bottom: 5px;
     right: 5px;
     font-size: 0.6rem;
+}
+.cursor-pointer {
+    cursor: pointer;
 }

@@ -25,9 +25,9 @@
                                 <span>Nami</span>
                             </div>
                             <div class="my-text-grey">
-                                <i class="fa-solid fa-circle-notch p-2 icon"></i> 
-                                <i class="fa-solid fa-message p-2 icon"></i> 
-                                <i class="fa-solid fa-ellipsis-vertical p-2 icon"></i>
+                                <i class="fa-solid cursor-pointer fa-circle-notch p-2 icon"></i> 
+                                <i class="fa-solid cursor-pointer fa-message p-2 icon"></i> 
+                                <i class="fa-solid cursor-pointer fa-ellipsis-vertical p-2 icon"></i>
                             </div>
                         </div>
                         <div class="col-12 my-notification d-flex align-items-center p-3">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div class="col-12 overflow-y-auto h-0 flex-grow-1">
-                            <div class="p-2 border-top d-flex align-items-center position-relative" v-for="user in contacts">
+                            <div class="p-2 border-top d-flex align-items-center position-relative cursor-pointer" v-for="user in contacts">
                                 <div>
                                     <img :src="user.avatar" class="contacts-avatar" :alt="user.name">
                                 </div>
@@ -72,41 +72,29 @@
                                 </div>
                             </div>
                             <div class="my-text-grey fs-5">
-                                <i class="fa-solid mx-2 fa-magnifying-glass"></i>
-                                <i class="fa-solid mx-2  fa-paperclip"></i>
-                                <i class="fa-solid mx-2 fa-ellipsis-vertical"></i>
+                                <i class="fa-solid mx-2 cursor-pointer fa-magnifying-glass"></i>
+                                <i class="fa-solid mx-2 cursor-pointer fa-paperclip"></i>
+                                <i class="fa-solid mx-2 cursor-pointer fa-ellipsis-vertical"></i>
                             </div>
                         </div>
                         <div class="col-12 flex-grow-1 h-0 overflow-y-auto chat-container">
-                            <div v-for="mex in contacts[0].messages">
-                                <div :class="mex.status">
-                                    <div :class="mex.status + '-message'">
-                                        <p class="m-0">{{ mex.message }}</p>
-                                        <span class="hour-message my-text-grey">{{ mex.date }}</span>
-                                    </div>
+                            <div v-for="mex in contacts[0].messages" :class="mex.status">
+                                <div :class="mex.status + '-message'">
+                                    <p class="m-0">{{ mex.message }}</p>
+                                    <span class="hour-message my-text-grey">{{ mex.date }}</span>
                                 </div>
                             </div>
-                            <!-- <div class="sent">
-                                <div class="sent-message">
-                                    <p class="m-0">{{ contacts[0].messages[0].message }}</p>
-                                    <span class="hour-message my-text-grey">15:30</span>
-                                </div>
-                            </div>
-                            <div class="sent">
-                                <div class="sent-message">
-                                    <span>{{ contacts[0].messages[1].message }}</span>
-                                    <span class="hour-message my-text-grey">15:50</span>
-                                </div>
-                            </div>
-                            <div class="received">
-                                <div class="received-message">
-                                    <span>{{ contacts[0].messages[2].message }}</span>
-                                    <span class="hour-message my-text-grey">16:15</span>
-                                </div>
-                            </div> -->
                         </div>
-                        <div class="col-12">
-
+                        <div class="col-12 d-flex justify-content-around align-items-center p-3 my-input-container">
+                            <div class="cursor-pointer">
+                                <i class="fa-regular fs-4 fa-face-smile"></i>
+                            </div>
+                            <div class="w-75">
+                                <input type="text" placeholder="Scrivi un messaggio" class="form-control">
+                            </div>
+                            <div class="cursor-pointer">
+                                <i class="fa-solid fs-4 fa-microphone"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
