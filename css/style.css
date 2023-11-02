@@ -1,7 +1,7 @@
 /* presets */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif !important;
 }
 :root {
     --color-white: #ffffff;
@@ -19,7 +19,7 @@ body {
 /* colors */
 
 .my-white {
-    color: var(--color-white);
+    background-color: var(--color-white);
 }
 .my-dark-text {
     color: var(--color-dark-text);
@@ -34,7 +34,7 @@ body {
     color: var(--color-headers);
 }
 .my-contact-hover {
-    color: var(--color-contact-hover);
+    background-color: var(--color-contact-hover);
 }
 .my-light-icons {
     color: var(--color-light-icons);
@@ -43,10 +43,42 @@ body {
     color: var(--color-sent-message);
 }
 .my-notification {
-    color: var(--color-notification);
+    background-color: var(--color-notification);
 }
 .my-bg-color {
-    color: var(--my-bg-color);
+    background: var(--my-bg-color);
 }
 
 /* utility */
+
+#app {
+    height: 100vh;
+    width: 100%;
+}
+.h-0 {
+    height: 0;
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.bell-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.my-fs {
+    font-size: 0.8rem;
+}
+.contacts-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.date-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+}
