@@ -216,13 +216,11 @@ createApp({
           });
           return filteredContacts;
       },
-      dropdown(index){
+      dropdownToggle(index){
         this.messageIndex = index;
-      },
-      dropdownToggle(){
         if(this.dropdownClass === ''){
           this.dropdownClass = 'show';
-        }else if(this.dropdownClass === 'show'){
+        }else{
           this.dropdownClass = '';
         }
       }

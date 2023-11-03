@@ -124,3 +124,15 @@ body {
 .active {
     background-color: var(--color-contact-hover);
 }
+.my-dropdown > a{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.sent-message:hover > .my-dropdown > a{
+    display: block;
+}
+.received-message:hover > .my-dropdown > a{
+    display: block;
+}

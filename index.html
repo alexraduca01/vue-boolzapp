@@ -82,10 +82,8 @@
                                 <div :class="mex.status + '-message'">
                                     <p class="m-0">{{ mex.message }}</p>
                                     <span class="hour-message my-text-grey">{{ mex.date }}</span>
-                                    <div class="dropdown">
-                                        <a class="btn btn-secondary dropdown-toggle" @click="dropdown(index), dropdownToggle()" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          Dropdown link
-                                        </a>
+                                    <div class="my-dropdown">
+                                        <a class="cursor-pointer fs-5 text-black" @click="dropdownToggle(index)"><i class="fa-solid fa-caret-down"></i></a>
                                         <ul class="dropdown-menu" :class="messageIndex === index ? dropdownClass : '' ">
                                           <li><a class="dropdown-item" href="#">Delete message</a></li>
                                         </ul>
