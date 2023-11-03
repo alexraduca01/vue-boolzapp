@@ -206,6 +206,12 @@ createApp({
             message: this.userMessage,
             status: "sent",
         });
+        setTimeout(() => {
+          this.contacts[this.activeIndex].messages.push({
+            date: dateTime.now().setLocale('it').toLocaleString(dateTime.TIME_SIMPLE),
+            message: 'ok',
+            status: "received",
+        })}, 1000);
         this.userMessage = "";
       },
     },
