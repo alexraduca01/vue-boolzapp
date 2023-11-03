@@ -187,13 +187,17 @@ createApp({
         };
     },
     methods: {
-        changeChat(index) {
-            this.activeIndex = index;
-        },
-        activeChat(index) {
+      changeChat(id){
+          for(let i = 0; i < this.contacts.length; i++){
+              if(this.contacts[i].id === id){
+                  this.activeIndex = i;
+              }
+          }
+      },
+      activeChat(index) {
             if(this.activeIndex === index){
                 return 'active';
             }
-        }
+      },
     },
 }).mount('#app');
