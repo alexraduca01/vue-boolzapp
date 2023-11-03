@@ -6,31 +6,31 @@ createApp({
           contacts: [
             {
               id: 1,
-              name: "Michele",
+              name: "Rosinante",
               avatar: "./img/avatar_1.jpg",
               visible: true,
               active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
-                  message: "Hai portato a spasso il cane?",
+                  message: "Perchè te ne sei andato?",
                   status: "sent",
                 },
                 {
                   date: "10/01/2020 15:50:00",
-                  message: "Ricordati di stendere i panni",
+                  message: "Mi manchi...",
                   status: "sent",
                 },
                 {
                   date: "10/01/2020 16:15:22",
-                  message: "Tutto fatto!",
+                  message: "Eh sai, sono morto!",
                   status: "received",
                 },
               ],
             },
             {
               id: 2,
-              name: "Fabio",
+              name: "Bepo",
               avatar: "./img/avatar_2.jpg",
               visible: true,
               active: false,
@@ -47,21 +47,21 @@ createApp({
                 },
                 {
                   date: "20/03/2020 16:35:00",
-                  message: "Mi piacerebbe ma devo andare a fare la spesa.",
+                  message: "Si. Dobbiamo invadare Onigashima",
                   status: "sent",
                 },
               ],
             },
             {
               id: 3,
-              name: "Samuele",
+              name: "Rufy",
               avatar: "./img/avatar_3.jpg",
               visible: true,
               active: false,
               messages: [
                 {
                   date: "28/03/2020 10:10:40",
-                  message: "La Marianna va in campagna",
+                  message: "Sanji è pronto il pranzo ?",
                   status: "received",
                 },
                 {
@@ -71,107 +71,107 @@ createApp({
                 },
                 {
                   date: "28/03/2020 16:15:22",
-                  message: "Ah scusa!",
+                  message: "Oops, errore mio!",
                   status: "received",
                 },
               ],
             },
             {
               id: 4,
-              name: "Alessandro B.",
+              name: "Buggy",
               avatar: "./img/avatar_4.jpg",
               visible: true,
               active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
-                  message: "Lo sai che ha aperto una nuova pizzeria?",
+                  message: "Ti darò la caccia e diventerò io imperatore!",
                   status: "sent",
                 },
                 {
                   date: "10/01/2020 15:50:00",
-                  message: "Si, ma preferirei andare al cinema",
+                  message: "Non volevo diventare imperatore! Risparmiami ti prego!",
                   status: "received",
                 },
               ],
             },
             {
               id: 5,
-              name: "Alessandro L.",
-              avatar: "./img/avatar_5.jpg",
+              name: "Crocodile",
+              avatar: "./img/avatar_5.png",
               visible: true,
               active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
-                  message: "Ricordati di chiamare la nonna",
+                  message: "Dopo Buggy toccherà a te",
                   status: "sent",
                 },
                 {
                   date: "10/01/2020 15:50:00",
-                  message: "Va bene, stasera la sento",
+                  message: "AHAHAHAHAHAAHAHAHAHAHAAHAHAHAH",
                   status: "received",
                 },
               ],
             },
             {
               id: 6,
-              name: "Claudia",
-              avatar: "./img/avatar_6.jpg",
+              name: "Eustass Kidd",
+              avatar: "./img/avatar_6.jpeg",
               visible: true,
               active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
-                  message: "Ciao Claudia, hai novità?",
+                  message: "Devi attenerti al piano! Non caricare a testa bassa",
                   status: "sent",
                 },
                 {
                   date: "10/01/2020 15:50:00",
-                  message: "Non ancora",
+                  message: "No",
                   status: "received",
                 },
                 {
                   date: "10/01/2020 15:51:00",
-                  message: "Nessuna nuova, buona nuova",
+                  message: "Sei proprio un idiota",
                   status: "sent",
                 },
               ],
             },
             {
               id: 7,
-              name: "Federico",
+              name: "Zoro",
               avatar: "./img/avatar_7.jpg",
               visible: true,
               active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
-                  message: "Fai gli auguri a Martina che è il suo compleanno!",
+                  message: "Devi occuparti di King il più velocemente possibile e poi aiutare Rufy",
                   status: "sent",
                 },
                 {
                   date: "10/01/2020 15:50:00",
-                  message: "Grazie per avermelo ricordato, le scrivo subito!",
+                  message: "Non prendo ordini da te, non sei il mio capitano",
                   status: "received",
                 },
               ],
             },
             {
               id: 8,
-              name: "Davide",
+              name: "Killer",
               avatar: "./img/avatar_8.jpg",
               visible: true,
               active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
-                  message: "Ciao, andiamo a mangiare la pizza stasera?",
+                  message: "Puoi dire a me il piano ? forse riesco a convincere Kidd",
                   status: "received",
                 },
                 {
                   date: "10/01/2020 15:50:00",
-                  message: "No, l'ho già mangiata ieri, ordiniamo sushi!",
+                  message: "Dovete intrattenere Big mom finchè non arrivo io per il colpo finale",
                   status: "sent",
                 },
                 {
