@@ -42,11 +42,11 @@
                         <div class="col-12 my-contact-hover p-1">
                             <div class="input-group input-group-sm">
                                 <div class="input-group-text px-4 bg-white" id="inputGroup-sizing-sm"><i class="fa-solid my-text-grey fa-magnifying-glass"></i></div>
-                                <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Cerca o inizia una nuova chat" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" v-model="filterContacts">
                             </div>
                         </div>
                         <div class="col-12 overflow-y-auto h-0 flex-grow-1">
-                            <div class="p-2 border-top d-flex align-items-center position-relative cursor-pointer" :class="activeChat(index)" v-for="(user, index) in contacts" @click="changeChat(user.id), activeChat(index)">
+                            <div class="p-2 border-top d-flex align-items-center position-relative cursor-pointer" :class="activeChat(user.id)" v-for="(user, index) in contactsFilter()" @click="changeChat(user.id), activeChat(user.id)">
                                 <div>
                                     <img :src="user.avatar" class="contacts-avatar" :alt="user.name">
                                 </div>

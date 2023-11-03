@@ -10,7 +10,6 @@ createApp({
               name: "Rosinante",
               avatar: "./img/avatar_1.jpg",
               visible: true,
-              active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
@@ -34,7 +33,6 @@ createApp({
               name: "Bepo",
               avatar: "./img/avatar_2.jpg",
               visible: true,
-              active: false,
               messages: [
                 {
                   date: "20/03/2020 16:30:00",
@@ -58,7 +56,6 @@ createApp({
               name: "Rufy",
               avatar: "./img/avatar_3.jpg",
               visible: true,
-              active: false,
               messages: [
                 {
                   date: "28/03/2020 10:10:40",
@@ -82,7 +79,6 @@ createApp({
               name: "Buggy",
               avatar: "./img/avatar_4.jpg",
               visible: true,
-              active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
@@ -101,7 +97,6 @@ createApp({
               name: "Crocodile",
               avatar: "./img/avatar_5.png",
               visible: true,
-              active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
@@ -120,7 +115,6 @@ createApp({
               name: "Kidd",
               avatar: "./img/avatar_6.jpeg",
               visible: true,
-              active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
@@ -144,7 +138,6 @@ createApp({
               name: "Zoro",
               avatar: "./img/avatar_7.jpg",
               visible: true,
-              active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
@@ -163,7 +156,6 @@ createApp({
               name: "Killer",
               avatar: "./img/avatar_8.jpg",
               visible: true,
-              active: false,
               messages: [
                 {
                   date: "10/01/2020 15:30:55",
@@ -183,6 +175,7 @@ createApp({
               ],
             },
           ],
+          filterContacts: '',
           userMessage: '',
           activeIndex: 0, 
         };
@@ -195,10 +188,10 @@ createApp({
               }
           }
       },
-      activeChat(index) {
-            if(this.activeIndex === index){
-                return 'active';
-            }
+      activeChat(id) {
+        if(this.contacts[this.activeIndex].id === id){
+          return 'active';
+        }
       },
       sendMessage(){
         this.contacts[this.activeIndex].messages.push({
@@ -213,6 +206,12 @@ createApp({
             status: "received",
         })}, 1000);
         this.userMessage = "";
+      },
+      contactsFilter(){
+          const filteredContacts = this.contacts.filter((contact) => {
+            return contact.name.toLowerCase().includes(this.filterContacts.toLowerCase());
+          });
+          return filteredContacts;
       },
     },
 }).mount('#app');
