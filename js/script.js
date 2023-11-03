@@ -204,7 +204,7 @@ createApp({
             date: dateTime.now().setLocale('it').toLocaleString(dateTime.TIME_SIMPLE),
             message: 'ok',
             status: "received",
-        })}, 1000);
+        })}, 1001);
         this.userMessage = "";
       },
       contactsFilter(){
