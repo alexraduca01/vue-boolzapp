@@ -177,7 +177,8 @@ createApp({
           ],
           filterContacts: '',
           userMessage: '',
-          activeIndex: 0, 
+          activeIndex: 0,
+          dropdownClass: '',
         };
     },
     methods: {
@@ -213,5 +214,13 @@ createApp({
           });
           return filteredContacts;
       },
+      dropdown(){
+        if(this.dropdownClass === 'show'){
+          this.dropdownClass = '';
+        } else {
+          this.dropdownClass ='show';
+        }
+        
+      }
     },
 }).mount('#app');
