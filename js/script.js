@@ -1,4 +1,5 @@
 const { createApp } = Vue;
+const dateTime = luxon.DateTime;
 
 createApp({
     data() {
@@ -116,7 +117,7 @@ createApp({
             },
             {
               id: 6,
-              name: "Eustass Kidd",
+              name: "Kidd",
               avatar: "./img/avatar_6.jpeg",
               visible: true,
               active: false,
@@ -182,8 +183,8 @@ createApp({
               ],
             },
           ],
-          activeIndex: 0,
-          activeChatBg: '', 
+          userMessage: '',
+          activeIndex: 0, 
         };
     },
     methods: {
@@ -198,6 +199,14 @@ createApp({
             if(this.activeIndex === index){
                 return 'active';
             }
+      },
+      sendMessage(){
+        this.contacts[this.activeIndex].messages.push({
+            date: dateTime.now().setLocale('it').toLocaleString(dateTime.TIME_SIMPLE),
+            message: this.userMessage,
+            status: "sent",
+        });
+        this.userMessage = "";
       },
     },
 }).mount('#app');

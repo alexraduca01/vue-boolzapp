@@ -64,7 +64,7 @@
                         <div class="col-12 border-start justify-content-between p-2 d-flex align-items-center">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    <img :src="contacts[activeIndex].avatar" class="avatar" alt="">
+                                    <img :src="contacts[activeIndex].avatar" class="avatar" :alt="contacts[activeIndex].name">
                                 </div>
                                 <div class="ms-2">
                                     <p class="m-0">{{ contacts[activeIndex].name }}</p>
@@ -90,7 +90,7 @@
                                 <i class="fa-regular fs-4 fa-face-smile"></i>
                             </div>
                             <div class="w-75">
-                                <input type="text" placeholder="Scrivi un messaggio" class="form-control">
+                                <input type="text" v-model="userMessage" @keyup.enter="sendMessage()" placeholder="Scrivi un messaggio" class="form-control">
                             </div>
                             <div class="cursor-pointer">
                                 <i class="fa-solid fs-4 fa-microphone"></i>
@@ -101,6 +101,7 @@
             </div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="js/script.js"></script>
     </body>
