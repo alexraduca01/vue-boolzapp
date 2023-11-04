@@ -55,7 +55,7 @@
                                     <p class="m-0 my-fs my-text-grey">Ultimo messaggio inviato</p>
                                 </div>
                                 <div class="date-container">
-                                    <span class="my-text-grey">{{ user.messages[user.messages.length - 1].date }}</span>
+                                    <span class="my-text-grey">{{ dynamicDate(user) }}</span>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="ms-2">
                                     <p class="m-0">{{ contacts[activeIndex].name }}</p>
-                                    <p class="m-0 my-fs my-text-grey">Ultimo accesso oggi alle 12:00</p>
+                                    <p class="m-0 my-fs my-text-grey">{{ lastAccess(contacts[activeIndex]) }}</p>
                                 </div>
                             </div>
                             <div class="my-text-grey fs-5">

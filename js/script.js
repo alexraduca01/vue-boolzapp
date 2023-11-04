@@ -227,5 +227,19 @@ createApp({
       deleteMessage(index){
         this.contacts[this.activeIndex].messages.splice(index, 1);
       },
+      dynamicDate(user){
+        if(user.messages.length > 0){
+          return user.messages[user.messages.length - 1].date;
+        } else{
+          return 'No last access'
+        }
+      },
+      lastAccess(element){
+        if(element.messages.length > 0){
+          return 'Ultimo accesso:'+ ' ' + element.messages[element.messages.length - 1].date;
+        } else{
+          return 'No last access';
+        }
+      },
     },
 }).mount('#app');
