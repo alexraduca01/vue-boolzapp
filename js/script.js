@@ -180,6 +180,7 @@ createApp({
           activeIndex: 0,
           messageIndex: null,
           dropdownClass: '',
+          iaResponse: ['"Mi rifiuto!" disse il netturbino.', 'Le mie figlie hanno sposato due salumieri. Quindi ho due... generi alimentari!', 'Tutti i bambini avevano un nome tranne... ?', "Due mandarini litigano furiosamente e uno dice all'altro: 'guarda che ti spicchio!!'", "Ma d'inverno si leggono più libri perché hanno la copertina?", 'Cosa fa una fabbrica di carta igienica che fallisce? Va a rotoli.'],
         };
     },
     methods: {
@@ -205,7 +206,7 @@ createApp({
         setTimeout(() => {
           this.contacts[this.activeIndex].messages.push({
             date: dateTime.now().setLocale('it').toLocaleString(dateTime.TIME_SIMPLE),
-            message: 'ok',
+            message: this.iaResponse[this.getRndInteger(0, this.iaResponse.length - 1)],
             status: "received",
         })}, 1001);
         this.userMessage = "";
@@ -245,6 +246,9 @@ createApp({
         if(user.messages.length > 0){
           return user.messages[user.messages.length - 1].message;
         }
+      },
+      getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
       },
     },
 }).mount('#app');
