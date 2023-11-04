@@ -85,7 +85,7 @@
                                     <div class="my-dropdown">
                                         <a class="cursor-pointer fs-5 text-black" @click="dropdownToggle(index)"><i class="fa-solid fa-caret-down"></i></a>
                                         <ul class="dropdown-menu" :class="messageIndex === index ? dropdownClass : '' ">
-                                          <li><a class="dropdown-item" href="#">Delete message</a></li>
+                                          <li><a class="dropdown-item" @click="deleteMessage(index)" href="#">Delete message</a></li>
                                         </ul>
                                     </div>
                                 </div>

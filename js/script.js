@@ -223,6 +223,9 @@ createApp({
         }else{
           this.dropdownClass = '';
         }
-      }
+      },
+      deleteMessage(index){
+        this.contacts[this.activeIndex].messages.splice(index, 1);
+      },
     },
 }).mount('#app');
