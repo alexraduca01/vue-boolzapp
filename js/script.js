@@ -198,17 +198,19 @@ createApp({
         }
       },
       sendMessage(){
-        this.contacts[this.activeIndex].messages.push({
+        if(this.userMessage !== ''){
+          this.contacts[this.activeIndex].messages.push({
             date: dateTime.now().setLocale('it').toLocaleString(dateTime.TIME_SIMPLE),
             message: this.userMessage,
             status: "sent",
-        });
-        setTimeout(() => {
-          this.contacts[this.activeIndex].messages.push({
-            date: dateTime.now().setLocale('it').toLocaleString(dateTime.TIME_SIMPLE),
-            message: this.iaResponse[this.getRndInteger(0, this.iaResponse.length - 1)],
-            status: "received",
-        })}, 1001);
+          });
+          setTimeout(() => {
+            this.contacts[this.activeIndex].messages.push({
+              date: dateTime.now().setLocale('it').toLocaleString(dateTime.TIME_SIMPLE),
+              message: this.iaResponse[this.getRndInteger(0, this.iaResponse.length - 1)],
+              status: "received",
+          })}, 1001);
+        };
         this.userMessage = "";
       },
       contactsFilter(){
