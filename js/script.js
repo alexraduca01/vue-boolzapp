@@ -241,5 +241,10 @@ createApp({
           return 'No last access';
         }
       },
+      lastMessage(user){
+        if(user.messages.length > 0){
+          return user.messages[user.messages.length - 1].message;
+        }
+      },
     },
 }).mount('#app');
