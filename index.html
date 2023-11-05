@@ -99,7 +99,8 @@
                                 <input type="text" v-model="userMessage" @keyup.enter="sendMessage()" placeholder="Scrivi un messaggio" class="form-control">
                             </div>
                             <div class="cursor-pointer">
-                                <i class="fa-solid fs-4 fa-microphone"></i>
+                                <button class="btn btn-success" v-if="userMessage !== ''" @click="sendMessage()"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i></button>
+                                <i class="fa-solid fs-4 fa-microphone" v-else></i>
                             </div>
                         </div>
                     </div>
