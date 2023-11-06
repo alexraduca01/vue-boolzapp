@@ -79,7 +79,7 @@
                         </div>
                         <div class="col-12 flex-grow-1 h-0 overflow-y-auto chat-container">
                             <div v-for="(mex, index) in contacts[activeIndex].messages" :class="mex.status">
-                                <div :class="mex.status + '-message'">
+                                <div :class="mex.status + '-message'" ref='lastMex'>
                                     <p class="m-0">{{ mex.message }}</p>
                                     <span class="hour-message my-text-grey">{{ mex.date }}</span>
                                     <div class="my-dropdown">
