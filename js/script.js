@@ -105,7 +105,7 @@ createApp({
                 },
                 {
                   date: "10/01/2020 15:50:00",
-                  message: "AHAHAHAHAHAAHAHAHAHAHAAHAHAHAH",
+                  message: "AHAHAHAHAHA",
                   status: "received",
                 },
               ],
@@ -181,6 +181,7 @@ createApp({
           messageIndex: null,
           dropdownClass: '',
           iaResponse: ['"Mi rifiuto!" disse il netturbino.', 'Le mie figlie hanno sposato due salumieri. Quindi ho due... generi alimentari!', 'Tutti i bambini avevano un nome tranne... ?', "Due mandarini litigano furiosamente e uno dice all'altro: 'guarda che ti spicchio!!'", "Ma d'inverno si leggono più libri perché hanno la copertina?", 'Cosa fa una fabbrica di carta igienica che fallisce? Va a rotoli.'],
+          showChat: false,
         };
     },
     methods: {
@@ -191,6 +192,7 @@ createApp({
                   this.dropdownClass = '';
               }
           }
+          this.showChat = true;
       },
       activeChat(id) {
         if(this.contacts[this.activeIndex].id === id){
