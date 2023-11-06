@@ -182,6 +182,7 @@ createApp({
           dropdownClass: '',
           iaResponse: ['"Mi rifiuto!" disse il netturbino.', 'Le mie figlie hanno sposato due salumieri. Quindi ho due... generi alimentari!', 'Tutti i bambini avevano un nome tranne... ?', "Due mandarini litigano furiosamente e uno dice all'altro: 'guarda che ti spicchio!!'", "Ma d'inverno si leggono più libri perché hanno la copertina?", 'Cosa fa una fabbrica di carta igienica che fallisce? Va a rotoli.'],
           showChat: false,
+          randomNames: ['pippo', 'pluto', 'paolino', 'topolino', 'sergione', 'riccardo'],
         };
     },
     methods: {
@@ -260,6 +261,22 @@ createApp({
       },
       getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
+      },
+      addContact(){
+        const newContact = {
+          id: this.contacts.length + 1,
+          name: this.randomNames[this.getRndInteger(0, this.randomNames.length - 1)],
+          avatar: "https://picsum.photos/200",
+          visible: true,
+          messages: [
+            {
+              date: '',
+              message: '',
+              status: '',
+            },
+          ],
+        };
+        this.contacts.push(newContact);
       },
     },
 }).mount('#app');
